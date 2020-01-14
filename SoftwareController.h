@@ -4,12 +4,14 @@
 	#include "marcsLanguageExtension.h"
 	#include <string.h> // for memcpy
 	#include <stdlib.h> // for malloc & free
+	#include <stdbool.h>
 
 	typedef struct
 	{
 		float KP;
 		float KI;
-		float KD;		
+		float KD;
+		bool D_InFeedbackloop;
 	}PIDControllerConstants_t;
 	
 	typedef struct
